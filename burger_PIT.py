@@ -271,7 +271,7 @@ def pred(params, pde):
     return u_net.apply(params, fd, X_init, u_init).reshape((100, 256))
 
 pde_num = 554
-preds_transformer = pred(params, pde_num)
+preds_transformer = pred(p_trained, pde_num)
 exact = Exact[pde_num]
 
 plt.figure(figsize=(10, 8))
